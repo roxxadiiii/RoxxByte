@@ -1,0 +1,20 @@
++++
+title = "RoxxByte"
+sort_by = "date"
+template = "article_list.html"
+page_template = "article.html"
+paginate_by = 5
++++
+
+{% crt() %}
+
+```
+      _          _          _          _          _
+    >(')____,  >(')____,  >(')____,  >(')____,  >(') ___,
+      (` =~~/    (` =~~/    (` =~~/    (` =~~/    (` =~~/
+jgs~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~
+```
+
+{% end %}
+
+Welcome to RoxxByte, built with Zola!

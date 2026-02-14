@@ -1,0 +1,12 @@
+[build]
+publish = "public"
+command = "git submodule update --init --recursive && zola build"
+
+[build.environment]
+ZOLA_VERSION = "0.20.1"
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[context.production.environment]
+URL = "https://roxxbyte.netlify.app/"
