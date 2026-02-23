@@ -1,7 +1,7 @@
 +++
 authors = ["Aditya Kumar"]
 title = "Famous Enviromentalists and their contribution"
-description = "Lorem ipsum dolor sit amet."
+description = "Since i have no experience whatso ever in writing blogs i tried to write my env assigment as a blog... <3"
 date = 2026-02-22
 [taxonomies]
 tags = ["blog", "cusb", "env"]
