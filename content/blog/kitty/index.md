@@ -8,6 +8,8 @@ tags = ["linux","terminal","gpu"]
 [extra]
 archive = true
 toc = true
+toc_inline = true
+toc_ordered = true
 trigger = "Dont try Linux.. you will get addicted to it"
 +++
 
@@ -88,6 +90,93 @@ thiss will compile the kitty to you system.
 
 ## Method THREE - Installing via Package Managers
 
-If you prefer using your system's package manager, kitty is available on most major platforms.Here's how to instal in on each one:
+If you prefer using your system's package manager, kitty is available on most major platforms.Here's how to install in on each one:
 
-### 
+### For Debain
+
+```bash
+sudo apt install kitty
+```
+
+### For Arch
+
+```bash
+sudo pacman -S kitty
+# for git version
+# using yay
+yay -S kitty-git
+
+#using paru
+paru -S kitty-git
+```
+
+### For Fedora
+
+```bash
+sudo dnf install kitty
+```
+
+### For macOS - Homebrew
+
+```bash
+brew install ---cask kitty
+```
+
+### For FreeBSD
+```bash
+pkg install kitty
+```
+
+## Verifying your Installation
+
+Once installed, let's make sure everything worked.Run this in you terminal:
+
+```bash
+kitty --version
+```
+
+You should see something like:
+```bash
+kitty 0.45.0 created by Kovid Goyal
+```
+
+If that prints out cleanly, you are good to go.Go ahead and launch it:
+```bash
+kitty
+```
+
+Your first Kitty window will open and honestly - even out of the box with zero configuration - you will notice the difference. The text is sharper, scrolling is smoother,and it just feels snappier that what you are used to.
+
+## Ran into problem?
+
+**Command not found after installing??** your `~/.local/bin` might not be in your PATH.Add this to your `~/.bashrc` or `~/.zshrc` or `~/.config/fish/config.fish`
+
+### for bash
+Open bash config using `vim`
+```bash
+vim ~/.bashrc
+```
+add this in your ~/.bashrc and and save the file
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+then reload the config
+
+```bash
+source ~/.bashrc
+```
+
+### for zsh
+Open zsh config using `vim`
+```bash
+vim ~/.zshrc
+```
+add this in your ~/.zshrc and save the file
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+then reload the config
+
+```bash
+
