@@ -6,6 +6,7 @@ date = 2026-03-10
 [taxonomies]
 tags = ["linux","terminal","gpu"]
 [extra]
+banner = "kitty.webp"
 archive = true
 toc = true
 toc_inline = true
@@ -179,4 +180,115 @@ export PATH="$HOME/.local/bin:$PATH"
 then reload the config
 
 ```bash
+source ~/.zshrc
+```
+
+### Fonts looks off?
+
+```bash
+macos_thicken_font 0.75
+```
+Its make noticable difference on Retina Displays.
+
+# Customizing Kitty
+
+One of the best things about Kitty is how easy it is to make it look exactly the way you want.
+No GUI settings menu,no clicking around - just a single config file that you edit directly.
+Once you get hang of it,it feels suprisingly satisfying.
+
+
+## Finding Your Config file
+
+Kitty's entire configuration lives in one file:
+
+```bash
+~/.config/kitty/kitty.conf
+```
+
+If it doesn't exist yet,just create it:
+
+```bash
+# making config dir
+mkdir -p ~/.config/kitty
+# creating kitty.conf
+touch ~/.config/kitty/kitty.conf
+```
+
+Open it in your favourite editor and you are ready to start customizing.
+
+## Changing the ColorScheme
+
+Kitty uses a straightforward color system.You define colors directly in `kitty.conf` using hex codes.Here's what a basic custom color setup look like:
+
+```bash
+# ~/.config/kitty/kitty.conf
+# Background and foreground
+background #1e1e2e
+foreground #cdd6f4
+
+# Cursor
+cursor #f5e0dc
+
+# Selection
+selection_background #313244
+selection_foreground #cdd6f4
+```
+Simple,clean,and totally in your control.
+
+## Using a premade Theme
+Don't have your own colorscheme?? Totally understandable.Kitty has a built-in theme browser that lets you preview and apply hundreds of community-made themes with a single command.
+
+Run this:
+
+```bash
+kitty +kitten themes
+```
+
+A beautiful interactive menu will pop up right inside your terminal.You can browser and preview themes live, and hit Enter to apply.It's one of those features that makes you go "wait,Thats so easy?"
+
+![Kitty theme preview](theme-preview.webp)
+
+My themes are;
+- catppuccin Mocha
+- Tokyo Night
+- Dracula
+- Gruvbox Dark
+- Nord
+
+## Applying Theme Manually
+
+If you already know which theme you want,you can apply it manually by adding an include line to your `kitty.conf`:
+
+First download any theme file of your choice, make sure its follow kitty conf style.
+
+```bash
+wget https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf
+```
+
+move that file to config dir of kitty's config
+```bash
+cp mocha ~/.config/kitty/
+```
+
+and include it in your config:
+
+```bash
+include mocha.conf
+```
+
+reload Kitty and you are done.
+
+## A Few extra Touches
+
+While you are in the config,here are couple of tweaks that go nicely alongside a new colorscheme:
+Change the background opacity for a frosted glass effect:
+
+```bash
+background_opacity 0.95
+```
+
+You can also add a subtle blur:
+```bash
+background_blur 10
+```
 
