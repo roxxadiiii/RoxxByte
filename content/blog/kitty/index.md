@@ -292,3 +292,62 @@ You can also add a subtle blur:
 background_blur 10
 ```
 
+# Fonts in Kitty
+Honestly,Fonts are one of the things you dont think about until you change them - and then you can never go back.The right font in your terminal makes code easier to read. reduces eye strain during long sessions,and just make the whole experience feel more polished.
+If you are vim/neovim lover then fonts should be your first priority in a terminal.
+
+## Setting Your Font
+All font settings live in the same `kitty.conf` file we touched earlier.Setting a font is as simple as:
+```conf
+font_family       JetBrains Mono
+bold_font         auto
+italic_font       auto
+bold_italic_font  auto
+```
+
+The `auto` values tell Kitty to automatically find the bold and italic variants of your chosen font.In most cases this just works without any extra effort.
+
+## Adjusting font Size
+finding the right font size is personal.Some people like things big and readable,others want small for more things to be visiable.Start here and tune to your taste:
+
+```conf
+font_size     13.5
+```
+
+## Best fonts for Kitty
+Not all fonts are created equal for terminal use.You want something that is:
+- **Monospaced** - every character takes the same width,essential for terminal aligment
+- **Highly legiable** - espacially at smaller sizes
+- **ligature support** - optional but makes operators like `=>` and `!=` really sleek
+
+Here are some of the most loved fonts in the terminal community right now:
+
+`JetBrains Mono` clean,modern, and designed specifically for code.has excellent ligature support and is incredibly readable at any size.This is the one I personally use and recommend starting with
+
+```conf
+font_family JetBrains Mono
+```
+
+`FiraCode` The OG ligature font.If you have seen beautiful screenshots of terminals with fancy arrow operators and slick symbols,there is good chance firaCode was involved.
+
+```conf
+font_family   FiraCode
+```
+
+`Hack` No-nonsense,clean,and built purely for terminals and code editors.If you want something that just gets out of the way and lets you focus,Hack is a great pick.
+
+```conf
+font_family   Hack
+```
+
+`Cascadia Code` Microslop's own opensource font,orignally built for Windows terminal,suprisingly excellent on Linux and macOS too,with great ligature support.
+
+```conf
+font_family     Cascadia Code
+```
+
+`Iosevka` Highly customizable and very slim.Great if you want to fit more content on screen without cranking the font size way down.
+
+```conf
+font_family   Iosevka
+```
