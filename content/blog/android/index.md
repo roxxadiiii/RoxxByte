@@ -36,3 +36,9 @@ XXXXXXXX    device
 
 - Now you are ready to soft brick your device............. Just kidding
 
+# Understanding ADB
+
+ADB stands for `Android Debug Bridge`.It is a tool that lets your computer communicate with your Adnroud phone through a USB cable.
+It was Built for developers but anyone can use it.It gives us access to settings and controls that are hidden from the normal Settings app - without rooting our phones.
+
+when we type a command on out computer , out phone listen to it and executes the command. thats ADB in the lamen words
